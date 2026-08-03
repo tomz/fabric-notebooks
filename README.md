@@ -4,9 +4,9 @@ Runnable Microsoft Fabric editions of the Spark reference material:
 
 | Notebook | Purpose |
 |---|---|
-| `33_spark_api_reference_fabric_runtime_2_0.ipynb` | Executable PySpark API reference |
-| `34_spark_user_guide_fabric_runtime_2_0.ipynb` | Executable Spark user guide |
-| `35_spark_tutorials_fabric_runtime_2_0.ipynb` | End-to-end Spark tutorials |
+| `spark_api_reference_fabric_runtime_2_0.ipynb` | Executable PySpark API reference |
+| `spark_user_guide_fabric_runtime_2_0.ipynb` | Executable Spark user guide |
+| `spark_tutorials_fabric_runtime_2_0.ipynb` | End-to-end Spark tutorials |
 
 These notebooks target **Microsoft Fabric Runtime 2.0 / Apache Spark 4.1**. They use Fabric managed `spark` session and do not create, connect to, or stop a Spark session themselves.
 
@@ -25,8 +25,8 @@ The notebooks contain no workspace, Lakehouse, environment, tenant, user, or dep
 Each notebook has a matching `.platform.json` definition for Fabric Git integration. Keep each pair together:
 
 ```text
-33_spark_api_reference_fabric_runtime_2_0.ipynb
-33_spark_api_reference_fabric_runtime_2_0.platform.json
+spark_api_reference_fabric_runtime_2_0.ipynb
+spark_api_reference_fabric_runtime_2_0.platform.json
 ```
 
 The platform definitions use schema version 2.0 and contain portable display metadata only.
