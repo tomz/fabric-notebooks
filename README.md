@@ -5,7 +5,7 @@ Runnable Microsoft Fabric editions of the Spark reference material:
 | Notebook | Purpose |
 |---|---|
 | `33_spark_api_reference_fabric_runtime_2_0.ipynb` | Executable PySpark API reference |
-| `34_spark_user_guide_fabric_runtime_2_0.ipynb` | Production-oriented Spark user guide |
+| `34_spark_user_guide_fabric_runtime_2_0.ipynb` | Executable Spark user guide |
 | `35_spark_tutorials_fabric_runtime_2_0.ipynb` | End-to-end Spark tutorials |
 
 These notebooks target **Microsoft Fabric Runtime 2.0 / Apache Spark 4.1**. They use Fabric managed `spark` session and do not create, connect to, or stop a Spark session themselves.
