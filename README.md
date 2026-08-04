@@ -7,6 +7,7 @@ Runnable Microsoft Fabric editions of the Spark reference material:
 | `spark_api_reference_fabric_runtime_2_0.ipynb` | Executable PySpark API reference |
 | `spark_user_guide_fabric_runtime_2_0.ipynb` | Executable Spark user guide |
 | `spark_tutorials_fabric_runtime_2_0.ipynb` | End-to-end Spark tutorials |
+| `fabric_lakehouse_copy_move_all.ipynb` | Generic phased copy/move of Lakehouse tables, Files, shortcuts, and Spark views |
 
 These notebooks target **Microsoft Fabric Runtime 2.0 / Apache Spark 4.1**. They use Fabric managed `spark` session and do not create, connect to, or stop a Spark session themselves.
 
@@ -19,6 +20,21 @@ These notebooks target **Microsoft Fabric Runtime 2.0 / Apache Spark 4.1**. They
 5. Run all cells.
 
 The notebooks contain no workspace, Lakehouse, environment, tenant, user, or deployment IDs. Their `metadata.dependencies.lakehouse` value is intentionally unbound so every user can select their own resources.
+
+## Lakehouse copy/move workflow
+
+`fabric_lakehouse_copy_move_all.ipynb` is runtime-neutral and uses Fabric
+workspace and Lakehouse UUID parameters rather than display names. Run it in
+three explicit phases:
+
+1. Attach the source Lakehouse and run `copy` first as a dry run, then apply it.
+2. Attach the target Lakehouse and run `finalize` with the full `manifestRoot`
+   returned by copy.
+3. For a move only, attach the source and run `delete-source` after validation
+   with the exact source-bound confirmation token.
+
+The notebook defaults to `dry_run = True`, supports pipeline-friendly text
+parameters, and never deletes a Lakehouse item.
 
 ## Fabric Git integration
 
